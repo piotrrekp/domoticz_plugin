@@ -1,5 +1,5 @@
 """
-<plugin key="hard" name="hard" author="piotrrek" version="1.0.0" wikilink="http://www.domoticz.com/wiki/plugins/plugin.html" externallink="https://www.micon.pl/">
+<plugin key="mic3" name="mic3" author="piotrrek" version="1.0.0" wikilink="http://www.domoticz.com/wiki/plugins/plugin.html" externallink="https://www.micon.pl/">
     <params>
        <param field="Mode1" label="Timeout" width="75px" required="true">
             <options>
@@ -38,7 +38,8 @@ NEW_MAC = "new mac"
 class BasePlugin:
     def __init__(self):
         return
-        
+    def onStop(self): 
+        self.locker.relase()
     def onStart(self):
         self.ipAddress = ""
         self.status = "empty status"
@@ -254,7 +255,10 @@ _plugin = BasePlugin()
 def onStart():
     global _plugin
     _plugin.onStart()
-    
+
+def onStop():
+    global _plugin
+    _plugin.onStop()
 
 def onMessage( Connection, Data):
     global _plugin
