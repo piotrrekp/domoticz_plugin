@@ -140,8 +140,8 @@ class BasePlugin:
             Devices[21].Delete()
             self.reciver.Disconnect()
             self.onStart()
-
         self.dev.handleMessage(msg)
+
     def onCommand(self, Unit, Command, Level, Hue):
         if Unit == 21:
             self.sender.Send("{Type: RemoveDevice}")

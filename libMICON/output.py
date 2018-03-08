@@ -210,9 +210,8 @@ class singleBistableOutput(object):
             
     def update(self, msg):
         self.in1Value = msg["In1"]
+        self.out1Value = msg["Out1"]
         self.updateInput()
-        if msg["Type"] == "RestartRequest":
-            self.out1Value = msg["Out1"]
         self.updateOutput()
         
     def getStringValue(self, value):
@@ -226,7 +225,7 @@ class singleBistableOutput(object):
         self.in1.Update(self.in1Value, self.getStringValue(self.in1Value))
     
     def handleCommand(self,Unit,Command):
-        if Unit == 1 :
+        if Unit == 1:
             if str(Command) == "On": value = 1
             else: value = 0
             if value != self.out1Value:
