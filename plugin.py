@@ -3,7 +3,7 @@
     <params>
        <param field="Mode1" label="Timeout" width="75px" required="true">
             <options>
-                <option label="1 minute" value="0.1"/>
+                <option label="10 seconds" value="0.1"/>
                 <option label="30 seconds" value="0.5" default="true" />
                 <option label="1 minute" value="1.0"/>
                 <option label="2 minutes" value="2.0"/>
