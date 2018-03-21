@@ -1,5 +1,5 @@
 """
-<plugin key="mic3" name="mic3" author="piotrrek" version="1.1.2" wikilink="http://www.domoticz.com/wiki/plugins/plugin.html" externallink="https://www.micon.pl/">
+<plugin key="mic3" name="mic3" author="piotrrek" version="1.0.1" wikilink="http://www.domoticz.com/wiki/plugins/plugin.html" externallink="https://www.micon.pl/">
     <params>
        <param field="Mode1" label="Timeout" width="75px" required="true">
             <options>
